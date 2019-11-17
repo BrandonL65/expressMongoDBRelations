@@ -18,6 +18,14 @@ app.use(express.json());
 app.use(cors());
 
 //Routes 
+const UserControls = require("./controllers/UserController.js");
+const CarControls = require("./controllers/CarController.js");
+app.get("/users", UserControls.all);
+app.get("/users/create", UserControls.create);
+app.get("/users/:username", UserControls.find);
+app.get("/users/:username/cars", UserControls.getAllCars);
+app.get("/cars", CarControls.all);
+app.get("/cars/:username/create", CarControls.create);
 
 //Start serv 
 app.listen(PORT);

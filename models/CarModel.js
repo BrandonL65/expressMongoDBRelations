@@ -10,3 +10,5 @@ let CarSchema = new Schema({
     ref: "User"
   }
 })
+
+module.exports = mongoose.model("Car", CarSchema);
