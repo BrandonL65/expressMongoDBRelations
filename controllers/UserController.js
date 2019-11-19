@@ -1,4 +1,3 @@
-let express = require("express");
 let UserModel = require("../models/UserModel.js");
 
 let UserController = {

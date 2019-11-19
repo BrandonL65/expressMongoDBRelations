@@ -24,6 +24,7 @@ app.get("/users", UserControls.all);
 app.get("/users/create", UserControls.create);
 app.get("/users/:username", UserControls.find);
 app.get("/users/:username/cars", UserControls.getAllCars);
+
 app.get("/cars", CarControls.all);
 app.get("/cars/:username/create", CarControls.create);
 
